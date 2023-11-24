@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Values Generator</title>
+</head>
+<body>
+    <script>
+        function getRandomValue(min, max, decimalPlaces) {
+            const randomVal = Math.random() * (max - min) + min;
+            return parseFloat(randomVal.toFixed(decimalPlaces));
+        }
+
+        // Example: generate a random value between 10 and 20 with 2 decimal places for Temperature
+        var tempMinValue = 28;
+        var tempMaxValue = 30;
+        var tempDecimalPlaces = 2;
+
+        var temperature = getRandomValue(tempMinValue, tempMaxValue, tempDecimalPlaces);
+
+        // Display the generated random value for Temperature
+        document.write(`<p>Temperature: ${temperature}</p>`);
+
+        // Example: generate a random value between 30 and 60 with 2 decimal places for Humidity
+        var humMinValue = 30;
+        var humMaxValue = 60;
+        var humDecimalPlaces = 2;
+
+        var humidity = getRandomValue(humMinValue, humMaxValue, humDecimalPlaces);
+
+        // Display the generated random value for Humidity
+        document.write(`<p>Humidity: ${humidity}</p>`);
+
+        // Example: generate a random value between 40 and 80 with 2 decimal places for Soil Moisture
+        var soilMinValue = 98;
+        var soilMaxValue = 100;
+        var soilDecimalPlaces = 0;
+
+        var soilMoisture = getRandomValue(soilMinValue, soilMaxValue, soilDecimalPlaces);
+
+        // Display the generated random value for Soil Moisture
+        document.write(`<p>Soil Moisture: ${soilMoisture}%</p>`);
+    </script>
+</body>
+</html>
